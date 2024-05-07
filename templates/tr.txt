@@ -1,0 +1,121 @@
+<div id="carouselExample" class="carousel slide">
+<!-- 
+            <div class="carousel-inner ">
+              <div class="carousel-item active justify-content-center align-items-center ">
+                <img src="img/images.jpeg" class="d-block w-50 img" alt="...">
+                <h2 class="display-2">KINDA Abdoul Latif</h2>      
+               </div> 
+               <div class="carousel-item  ">
+                <img src="img/images.jpeg" class="d-block w-50 img" alt="...">
+                <h2 class="display-2">MAHARAVO Anicet</h2>      
+               </div> 
+               <div class="carousel-item  ">
+                <img src="img/images.jpeg" class="d-block w-50 img" alt="...">
+                <h2 class="display-2">MALKIL Loubaba</h2>      
+               </div> 
+               <div class="carousel-item  ">
+                <img src="img/images.jpeg" class="d-block w-50 img" alt="...">
+                <h2 class="display-2">RYAD Kawtar</h2>      
+               </div> 
+             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn btn-info" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div> -->
+
+
+        # Load the YOLOv5 model
+        model = YOLO('modele/best.pt')
+
+        # Read the input image using Pillow (PIL)
+        img = Image.open(image_path)
+
+        # Perform prediction on the image
+        results = model(img)
+
+        # Extract relevant information from the prediction
+        names_dict = results.names
+        probs = results.pred[0][:, 4].tolist()  # Confidence scores for each class
+        class_ids = results.pred[0][:, 5].tolist()  # Predicted class indices
+        class_names = [names_dict[int(class_id)] for class_id in class_ids]
+        
+        # Get the predicted class with the highest confidence
+        max_conf_index = probs.index(max(probs))
+        prediction = class_names[max_conf_index]
+        from ultralytics import YOLO
+        from PIL import Image
+
+
+        <div id="carouselExample" class="carousel slide justify-content-center align-items-center">
+            <div class="carousel-inner">
+              <div class="carousel-item active justify-content-center align-items-center">
+                <div class="row">
+                  <div class="col">
+                    <img class="image" src="{{url_for('static', filename='avatars/kinda.jpg') }}" class="d-block w-100 h-50 img" alt="...">
+                    <div class="alert alert-dark mt-3">
+                      <h4 class="display-6 text-center ">KINDA Abdoul Latif</h4>
+                      <div class="flex text-center">
+                        <a href="https://www.linkedin.com/in/abdoul-latif-kinda-657a261b8/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/KINDAAbdoulLatif" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="mailto:kinda.abdoul.latif.14@gmail.com" class="social-icon"><i class="far fa-envelope"></i></a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col">
+                    <img class="image" src="{{url_for('static', filename='avatars/Anicet.jpg') }}" class="d-block w-100 img" alt="...">
+                    <div class="alert alert-info mt-3">
+                      <h2 class="display-6 text-center">MAHARAVO Anicet</h2>
+                      <div class="flex text-center">
+                        <a href="http://www.linkedin.com/in/ravo-anicet" target="_blank" class="mr-1  social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/TefinjanaharyAnice1" target="_blank" class="mr-1 social-icon"><i class="fab fa-github"></i></a>
+                        <a href="mailto:tefinjanaharyanicet@gmail.com" class="mr-1 social-icon"><i class="far fa-envelope"></i></a>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col">
+                    <img class="image" src="{{url_for('static', filename='avatars/Loubaba.jpg') }}" class="d-block w-100 img" alt="...">
+                    <div class="alert alert-dark mt-3">
+                      <h2 class="display-6 text-center">MALKIL Loubaba</h2>
+                    <div class="flex text-center">
+                      <a href="https://www.linkedin.com/in/loubaba-malki-l-hlaibi-32b6a7254" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                      <a href="http://github.com/LOUBABA212" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                      <a href="mailto:loubaba.elmalki@gmail.com" class="social-icon"><i class="far fa-envelope"></i></a>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <img class="image" src="{{url_for('static', filename='avatars/kawtar.jpg') }}" class="d-block w-100 img" alt="...">
+                    <div class="alert alert-info mt-3">
+                      <h2 class="display-6 text-center">RYAD Kawtar</h2>
+                      <div class="flex text-center">
+                        <a href="https://www.linkedin.com/in/ryad-kawtar-529884253" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="mailto:example@example.com" class="social-icon"><i class="far fa-envelope"></i></a>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev btn btn-danger" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn btn-info" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> 
