@@ -12,3 +12,5 @@ Technologies Used
 Architectures: ResNet50, YOLOV8 and VGG were utilized as the main architectures for training our models.
 Framework: Flask was employed for the training process.
 Model repository: https://drive.google.com/drive/folders/1s2j9RU_nHO48SF0BpZlAhm3l6uTpDZHP?usp=sharing
+Dataset 1 : https://drive.google.com/file/d/1QwuAj-M58y5eUg52E9bL45dm6UEDSmgI/view
+Dataset2 : https://drive.google.com/file/d/1bk0Zo5qGq-G3VFLeCGZcUmpMJrHI98JY/view?usp=drive_web
