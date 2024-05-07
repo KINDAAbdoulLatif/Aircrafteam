@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircrafteam</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-8hcc4tEaI3cV1o7G6wyj4UQ+dGH8eT7BMFMx2VrCzmt+5McWTV0iymVcFCGch1REBm5f4rT3m5XQoiQ/dm4CtQ==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sedan+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container mx-auto my-auto">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUnderlineExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex ">
+              <img src="{{ url_for('static', filename='images/f16.jpg')}}" width="50" />
+              <h1 class="text-right h1" >Military Aircraft Classification by <span class="lato-bold-italic">Aircrafteam</span> </h1>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarUnderlineExample">
+              <ul class="navbar-nav navbar-nav-underline">
+                <li class="nav-item">
+                  <a class="nav-link active sedan-sc-regular" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link sedan-sc-regular" href="#sect2">Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link   sedan-sc-regular" href='/form' role="button" >Try model</a>
+                  
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+    </nav>
+
+
+    <section id="sect1" class="container-fluid ">
+        <div id="btn1" class="badge bg-secondary"> 
+          <a href='/form' class="btn btn-info lato-light-italic"   >Try our model</a>
+          <h4 class="lato-thin">USE OUR AI FOR KNOWING <br> <span class="lato-black">THE MODELE OF YOUR AIRCRAFT</span> </h4>
+        </div>    
+    </section>
+    <!-- About 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5">
+  <h1 class="display-1 text-center sedan-sc-regular" >About us</h1>
+
+  <div class="container">
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6 col-xl-5">
+        <img class="img-fluid rounded" loading="lazy" src="{{url_for('static', filename='images/download.jpeg') }}" alt="About 1">
+      </div>
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+            <h2 class="mb-3">Who Are We?</h2>
+            <p class="lead fs-4 text-secondary mb-3">We help governments and airline companies to build incredible models of Machine Learning. Our perspective is to furnish outstanding captivating services.</p>
+            <p class="mb-5">"Introducing our cutting-edge aircraft detection model for both civil and military applications. Utilizing state-of-the-art deep learning techniques, our model provides unparalleled accuracy in identifying aircraft in various environments. From civilian airspace monitoring to military surveillance, trust our solution for precise and reliable detection.".</p>
+            <div class="row gy-4 gy-md-0 gx-xxl-5X">
+              <div class="col-12 col-md-6">
+                <div class="d-flex">
+                  <div class="me-4 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                      <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="h4 mb-3">Versatile Brand</h2>
+                    <p class="text-secondary mb-0">We are crafting a digital method that subsists life across all mediums.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="d-flex">
+                  <div class="me-4 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                      <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="h4 mb-3">Digital Agency</h2>
+                    <p class="text-secondary mb-0">We believe in innovation by merging primary with elaborate ideas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="sect2">
+      <div class="row">
+        <div class="col">
+          <img class="image" src="{{url_for('static', filename='avatars/kinda.jpg') }}" class="d-block w-100 h-50 img" alt="...">
+          <div class="alert alert-dark mt-3">
+            <h4 class="display text-center ">KINDA Abdoul Latif</h4>
+            <div class="flex text-center">
+              <a href="https://www.linkedin.com/in/abdoul-latif-kinda-657a261b8/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/KINDAAbdoulLatif" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="mailto:kinda.abdoul.latif.14@gmail.com" class="social-icon"><i class="far fa-envelope"></i></a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col">
+          <img class="image anicet" src="{{url_for('static', filename='avatars/Anicet.jpg') }}" class="d-block w-100 img" alt="...">
+          <div class="alert alert-info mt-3">
+            <h2 class="display text-center">MAHARAVO .T. Anicet</h2>
+            <div class="flex text-center">
+              <a href="http://www.linkedin.com/in/ravo-anicet" target="_blank" class="mr-1  social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/TefinjanaharyAnice1" target="_blank" class="mr-1 social-icon"><i class="fab fa-github"></i></a>
+              <a href="mailto:tefinjanaharyanicet@gmail.com" class="mr-1 social-icon"><i class="far fa-envelope"></i></a>
+            </div>
+          </div>
+         
+        </div>
+        <div class="col">
+          <img class="image loubaba" src="{{url_for('static', filename='avatars/Loubaba.jpg') }}" class="d-block w-100 img" alt="...">
+          <div class="alert alert-dark mt-3">
+            <h2 class="display text-center">MALKI L’HLAIBI LOUBABA </h2>
+          <div class="flex text-center">
+            <a href="https://www.linkedin.com/in/loubaba-malki-l-hlaibi-32b6a7254" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="http://github.com/LOUBABA212" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:loubaba.elmalki@gmail.com" class="social-icon"><i class="far fa-envelope"></i></a>
+          </div>
+          </div>
+        </div>
+        <div class="col">
+          <img class="image ryad" src="{{url_for('static', filename='avatars/kawtar.jpg') }}" class="d-block w-100 img" alt="...">
+          <div class="alert alert-info mt-3">
+            <h2 class="display text-center">RYAD Kawtar</h2>
+            <div class="flex text-center">
+              <a href="https://www.linkedin.com/in/ryad-kawtar-529884253" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="mailto:example@example.com" class="social-icon"><i class="far fa-envelope"></i></a>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+        
+           
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+</body>
+</html>
